@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free Hindi and English typing practice with timer, speed and accuracy results.">
+<meta name="theme-color" content="#10213b">
+<title>CPCT Typing Practice — Hindi & English</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav><a class="brand" href="./" aria-label="Home">⌨️ CPCT Typing Practice</a><span class="pill">FREE PRACTICE</span></nav>
+    <section class="hero"><p class="eyebrow">HINDI • ENGLISH • DAILY PRACTICE</p><h1>अपनी टाइपिंग स्पीड बढ़ाएँ</h1><p>हिंदी और अंग्रेज़ी पैसेज का अभ्यास करें, समय पर टेस्ट दें और अपनी स्पीड व एक्यूरेसी देखें।</p></section>
+  </div>
+</header>
+<main class="container">
+  <section class="card settings">
+    <div class="field"><label for="language">भाषा / Language</label><select id="language"><option value="en">English</option><option value="hi">हिंदी (Unicode)</option></select></div>
+    <div class="field"><label for="duration">समय / Duration</label><select id="duration"><option value="1">1 मिनट — Demo</option><option value="5">5 मिनट</option><option value="10">10 मिनट</option><option value="15" selected>15 मिनट</option></select></div>
+    <div class="field"><label for="passageChoice">पैसेज / Passage</label><select id="passageChoice"><option value="0">Passage 1</option><option value="1">Passage 2</option><option value="2">Passage 3</option></select></div>
+  </section>
+  <section class="stats">
+    <article class="stat"><span>समय शेष / Time left</span><strong id="time">15:00</strong></article>
+    <article class="stat"><span>स्पीड / WPM*</span><strong id="wpm">0</strong></article>
+    <article class="stat"><span>एक्यूरेसी / Accuracy</span><strong id="accuracy">100%</strong></article>
+    <article class="stat"><span>सही अक्षर / Correct chars</span><strong id="correct">0</strong></article>
+  </section>
+  <section class="card">
+    <div class="section-heading"><h2>1. पैसेज पढ़ें</h2><span id="status" class="status">Start दबाएँ</span></div>
+    <div class="passage" id="passage" lang="en"></div>
+    <div class="section-heading typing-heading"><h2>2. यहाँ टाइप करें</h2></div>
+    <textarea id="typing" placeholder="Start Test दबाएँ, फिर यहाँ टाइप करें…" disabled spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+    <div class="actions"><button class="button primary" id="start">Start Test</button><button class="button secondary" id="reset">Reset</button><button class="button neutral" id="finish">Finish Test</button></div>
+    <div class="result" id="result" hidden><h2>टेस्ट पूरा हुआ!</h2><div class="result-stats"><div><strong id="finalWpm">0</strong><span>WPM*</span></div><div><strong id="finalAcc">100%</strong><span>एक्यूरेसी</span></div><div><strong id="finalCorrect">0</strong><span>सही अक्षर</span></div></div><p id="resultNote"></p></div>
+    <p class="note">*यह अभ्यास स्कोर अनुमानित है, आधिकारिक CPCT परिणाम नहीं। हिंदी टाइपिंग के लिए अपने कंप्यूटर में उपयुक्त Unicode Hindi input/keyboard सेट करें।</p>
+  </section>
+  <section class="info-grid">
+    <article class="card"><h2>कैसे अभ्यास करें?</h2><ol><li>भाषा और टेस्ट का समय चुनें।</li><li>Start Test दबाएँ।</li><li>दिए गए पैसेज को नीचे टाइप करें।</li><li>रिज़ल्ट देखकर रोज़ अभ्यास करें।</li></ol></article>
+    <article class="card"><h2>महत्वपूर्ण जानकारी</h2><p>यह स्वतंत्र अभ्यास वेबसाइट है, आधिकारिक CPCT पोर्टल नहीं। परीक्षा के नवीनतम नियम और स्कोरिंग के लिए आधिकारिक CPCT वेबसाइट देखें।</p><a href="https://www.cpct.mp.gov.in/" target="_blank" rel="noopener noreferrer">Official CPCT website ↗</a></article>
+  </section>
+</main>
+<footer><div class="container">© <span id="year"></span> CPCT Typing Practice · Free learning demo</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
